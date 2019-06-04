@@ -1,0 +1,42 @@
+<section>
+<div class="container mt-4 mb-5">
+<input
+  type="text"
+  #searchInput
+  (keyup)="search(searchInput.value)"
+  placeholder="Search for a word"
+  class="input form-control form-control-lg form-control-borderless shadow mb-5 bg-white rounded"
+/>
+	</div>
+
+	</section>
+<section class="cards">
+	<div class="container">
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-2">
+      <div class="card-body" *ngFor="let word of (dictionary$ | async)">
+        <h5 class="card-title text-center">English</h5>
+        <p class="card-text text-center">{{ word?.en }}</p>
+		  
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body" *ngFor="let word of (dictionary$ | async)">
+        <h5 class="card-title text-center">Greenlandic</h5>
+        <p class="card-text text-center">{{ word?.grl }}</p>
+		  <audio controls>
+	<source src="{{ word?.recording }}" type="audio/mpeg">
+</audio>
+      </div>
+    </div>
+  </div>
+</div>
+		<div *ngIf="(dictionary$ | async)?.length < 1">
+  <hr />
+  <p>No results found :(</p>
+</div>
+		</div>
+	</section>

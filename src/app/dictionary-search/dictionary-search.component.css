@@ -1,0 +1,52 @@
+/* Search form */
+.input {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+/* card body */ 
+.cards {
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+}
+.card {
+	height: 170px;
+	background: rgba(255, 255, 255, 0.1); 
+}
+.card-title {
+}
+audio {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+	.input {
+		width: 100%;;
+	}
+	.cards{
+		width: auto;
+	}
+.card {
+	height: auto;
+}
+}

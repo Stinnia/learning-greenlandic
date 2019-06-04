@@ -1,0 +1,20 @@
+.footer {
+	 background: linear-gradient(to top, transparent,white),
+      url("../../assets/greenland_footer.png") no-repeat center;
+	background-size: 60%;
+	height: 40vh;
+	z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+.footer {
+	 background: linear-gradient(to top, transparent,white),
+      url("../../assets/greenland_footer.png");
+	background-size: cover;
+	height: 25vh;
+	z-index: -1;
+}
+	.text-white {
+		font-size: 12px;
+	}
+}
